@@ -1,6 +1,8 @@
 package fintechJava;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Conta {
     private int idConta;
@@ -8,6 +10,7 @@ public class Conta {
     private String tipoConta = "Indefinido";
     private boolean statusConta = false;
     private Date dataAberturaConta;
+    private double saldoConta;
 
     public void exibirConta(){
         System.out.println("Id: " + this.getIdConta());
@@ -17,14 +20,23 @@ public class Conta {
         System.out.println("Data de Abertura: " + this.getDataAberturaConta());
     }
 
+    public void depositar (double valor){
+        this.saldoConta += valor;
+    }
+
+    public void retirar (double valor){
+        this.saldoConta -= valor;
+    }
+
     public Conta(){}
 
-    public Conta(int idConta, String numeroConta, String tipoConta, boolean statusConta, Date dataAberturaConta) {
+    public Conta(int idConta, String numeroConta, String tipoConta, boolean statusConta, Date dataAberturaConta, double saldoConta) {
         this.idConta = idConta;
         this.numeroConta = numeroConta;
         this.tipoConta = tipoConta;
         this.statusConta = statusConta;
         this.dataAberturaConta = dataAberturaConta;
+        this.saldoConta = saldoConta;
     }
 
     public int getIdConta() {
@@ -65,5 +77,13 @@ public class Conta {
 
     public void setDataAberturaConta(Date dataAberturaConta) {
         this.dataAberturaConta = dataAberturaConta;
+    }
+
+    public double getSaldoConta() {
+        return saldoConta;
+    }
+
+    public void setSaldoConta(double saldoConta) {
+        this.saldoConta = saldoConta;
     }
 }

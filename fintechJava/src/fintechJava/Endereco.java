@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Endereco extends Cidade{
+    private String nomeEndereco = "Indefinido";
     private int idEndereco;
     private String logradouro = "Indefinido";
     private String bairro = "Indefinido";
     private String numero = "Indefinido";
     private String cep = "Indefinido";
-    private String nomeEndereco = "Indefinido";
+
     // Atributo tipo lista que recebe classe endereco e cria uma array
     private List<Endereco> enderecosList = new ArrayList<>();
 
