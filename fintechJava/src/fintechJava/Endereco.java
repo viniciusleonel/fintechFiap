@@ -15,6 +15,8 @@ public class Endereco extends Cidade{
 
     // Metodos
     public void exibirEndereco(){
+        System.out.println("ID do Endereço: " + this.getIdEndereco());
+        System.out.println("Nome do Endereço: " + this.getNomeEndereco());
         System.out.println("Rua: " + this.getLogradouro());
         System.out.println("Número: " + this.getNumero());
         System.out.println("Bairro: " + this.getBairro());
@@ -33,7 +35,8 @@ public class Endereco extends Cidade{
     public void listarEnderecos(){
         for (Endereco endereco : enderecosList){
             System.out.println("===================");
-            System.out.println("Endereço: " + endereco.nomeEndereco);
+            System.out.println("ID do Endereço: " + endereco.getIdEndereco());
+            System.out.println("Nome do Endereço: " + endereco.getNomeEndereco());
             System.out.println("Rua: " + endereco.getLogradouro());
             System.out.println("Número: " + endereco.getNumero());
             System.out.println("Bairro: " + endereco.getBairro());

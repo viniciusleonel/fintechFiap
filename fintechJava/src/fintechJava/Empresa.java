@@ -1,16 +1,13 @@
 package fintechJava;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Empresa extends Endereco{
     private int idEmpresa;
-    private String razaoSocial;
-    private String nomeFantasia;
-    private String cnpj;
+    private String razaoSocial = "Indefinido";
+    private String nomeFantasia = "Indefinido";
+    private String cnpj = "Indefinido";
     private double capitalEmpresa;
-    private String telefone;
-    private String email;
+    private String telefone = "Indefinido";
+    private String email = "Indefinido";
     private double faturamento;
 
     // Construtor vazio
