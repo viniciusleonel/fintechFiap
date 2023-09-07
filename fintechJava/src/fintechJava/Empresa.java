@@ -4,26 +4,39 @@ public class Empresa extends Endereco{
     private int idEmpresa;
     private String razaoSocial = "Indefinido";
     private String nomeFantasia = "Indefinido";
-    private String cnpj = "Indefinido";
+    private String cnpjEmpresa = "Indefinido";
     private double capitalEmpresa;
-    private String telefone = "Indefinido";
-    private String email = "Indefinido";
-    private double faturamento;
+    private String telefoneEmpresa = "Indefinido";
+    private String emailEmpresa = "Indefinido";
+    private double faturamentoEmpresa;
+    private Conta contaEmpresa;
+
+    public void exibirEmpresa(){
+        System.out.println("===============");
+        System.out.println("Id: " + this.getIdEmpresa());
+        System.out.println("Razão Social: " + this.getRazaoSocial());
+        System.out.println("Nome Fantasia: " + this.getNomeFantasia());
+        System.out.println("Cnpj: " + this.getCnpjEmpresa());
+        System.out.println("Telefone: " + this.getTelefoneEmpresa());
+        System.out.println("Email: " + this.getEmailEmpresa());
+        System.out.println("Faturamento: " + this.getFaturamentoEmpresa());
+        contaEmpresa.exibirConta();
+    }
 
     // Construtor vazio
     public Empresa(){}
 
     // Construtor com parametros
-    public Empresa(int idPais, String nomePais, int idEstado, String uf, String nomeEstado, int idCidade, String nomeCidade, int idEndereco, String logradouro, String bairro, String numero, String cep, int idEmpresa, String razaoSocial, String nomeFantasia, String cnpj, double capitalEmpresa, String telefone, String email, double faturamento) {
+    public Empresa(int idPais, String nomePais, int idEstado, String uf, String nomeEstado, int idCidade, String nomeCidade, int idEndereco, String logradouro, String bairro, String numero, String cep, int idEmpresa, String razaoSocial, String nomeFantasia, String cnpjEmpresa, double capitalEmpresa, String telefoneEmpresa, String emailEmpresa, double faturamentoEmpresa) {
         super(idPais, nomePais, idEstado, uf, nomeEstado, idCidade, nomeCidade, idEndereco, logradouro, bairro, numero, cep);
         this.idEmpresa = idEmpresa;
         this.razaoSocial = razaoSocial;
         this.nomeFantasia = nomeFantasia;
-        this.cnpj = cnpj;
+        this.cnpjEmpresa = cnpjEmpresa;
         this.capitalEmpresa = capitalEmpresa;
-        this.telefone = telefone;
-        this.email = email;
-        this.faturamento = faturamento;
+        this.telefoneEmpresa = telefoneEmpresa;
+        this.emailEmpresa = emailEmpresa;
+        this.faturamentoEmpresa = faturamentoEmpresa;
     }
 
     // Getters and Setters
@@ -51,12 +64,12 @@ public class Empresa extends Endereco{
         this.nomeFantasia = nomeFantasia;
     }
 
-    public String getCnpj() {
-        return cnpj;
+    public String getCnpjEmpresa() {
+        return cnpjEmpresa;
     }
 
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
+    public void setCnpjEmpresa(String cnpjEmpresa) {
+        this.cnpjEmpresa = cnpjEmpresa;
     }
 
     public double getCapitalEmpresa() {
@@ -67,27 +80,35 @@ public class Empresa extends Endereco{
         this.capitalEmpresa = capitalEmpresa;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public String getTelefoneEmpresa() {
+        return telefoneEmpresa;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
+    public void setTelefoneEmpresa(String telefoneEmpresa) {
+        this.telefoneEmpresa = telefoneEmpresa;
     }
 
-    public String getEmail() {
-        return email;
+    public String getEmailEmpresa() {
+        return emailEmpresa;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmailEmpresa(String emailEmpresa) {
+        this.emailEmpresa = emailEmpresa;
     }
 
-    public double getFaturamento() {
-        return faturamento;
+    public double getFaturamentoEmpresa() {
+        return faturamentoEmpresa;
     }
 
-    public void setFaturamento(double faturamento) {
-        this.faturamento = faturamento;
+    public void setFaturamentoEmpresa(double faturamentoEmpresa) {
+        this.faturamentoEmpresa = faturamentoEmpresa;
+    }
+
+    public Conta getContaEmpresa() {
+        return contaEmpresa;
+    }
+
+    public void setContaEmpresa(Conta contaEmpresa) {
+        this.contaEmpresa = contaEmpresa;
     }
 }

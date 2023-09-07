@@ -13,10 +13,12 @@ public class Conta {
     private double saldoConta;
 
     public void exibirConta(){
+//        System.out.println("===============");
         System.out.println("Id: " + this.getIdConta());
         System.out.println("Número: " + this.getNumeroConta());
         System.out.println("Tipo: " + this.getTipoConta());
         System.out.println("Status: " + this.getStatusConta());
+        System.out.println("Saldo: " + this.getSaldoConta());
         System.out.println("Data de Abertura: " + this.getDataAberturaConta());
     }
 

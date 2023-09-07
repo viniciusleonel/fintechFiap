@@ -16,12 +16,12 @@ public class Transacao {
 
 
     // Adiciona uma transação na lista de transações
-    public void adicionarEndereco(Transacao transacao) {
+    public void adicionarTransacao(Transacao transacao) {
         this.transacoesList.add(transacao);
     }
 
     // Mostra as transações listadas
-    public void listarEnderecos(){
+    public void listarTransacoes(){
         for (Transacao transacao : transacoesList){
             System.out.println("===================");
             System.out.println("ID da Transação: " + transacao.getIdTransacao());

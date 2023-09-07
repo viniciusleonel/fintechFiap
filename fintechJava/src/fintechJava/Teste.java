@@ -1,14 +1,23 @@
 package fintechJava;
 
-import java.util.Date;
-
 public class Teste {
     public static void main(String[] args) {
         Usuario user1 = new Usuario();
-        Usuario user2 = new Usuario();
         user1.setNomeUsuario("Lucas");
-        user2.setNomeUsuario("Nathalie");
-        System.out.println();
+        Conta contaUsuario1 = new Conta();
+        contaUsuario1.setIdConta(12345);
+        contaUsuario1.setStatusConta(true);
+        user1.setContaUsuario(contaUsuario1);
+        user1.exibirUsuario();
+
+        Empresa empresa1 = new Empresa();
+        empresa1.setNomeFantasia("DinDinThink");
+        empresa1.setFaturamentoEmpresa(1000000);
+        Conta contaEmpresa = new Conta();
+        contaEmpresa.setSaldoConta(-5000);
+        contaEmpresa.setNumeroConta("6969");
+        empresa1.setContaEmpresa(contaEmpresa);
+        empresa1.exibirEmpresa();
 
 
 //        Endereco end = new Endereco();
