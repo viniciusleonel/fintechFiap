@@ -11,6 +11,7 @@ public class Transacao extends Conta{
     private String tipoTransacao;
     private String descricaoTransacao;
     private String destinoTransacao;
+    private Conta conta;
 
     // Atributo tipo lista que recebe classe Transacao e cria uma array
     private List<Transacao> transacoesList = new ArrayList<>();
@@ -38,6 +39,7 @@ public class Transacao extends Conta{
         System.out.println("Valor: " + this.getValorTransacao());
         System.out.println("Tipo: " + this.getTipoTransacao());
         System.out.println("Descrição: " + this.getDescricaoTransacao());
+        conta.exibirConta();
     }
 
     // Construtor básico
@@ -47,6 +49,7 @@ public class Transacao extends Conta{
         this.setTipoTransacao("Indefinido");
         this.setDestinoTransacao("Indefinido");
         this.setDestinoTransacao("Sem descrição");
+        this.setDataTransacao(new Date());
     }
 
     // Construtor com parametros

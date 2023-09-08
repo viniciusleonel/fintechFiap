@@ -10,6 +10,7 @@ public class Conta {
     private String tipoConta;
     private boolean statusConta;
     private Date dataAberturaConta;
+    private Date dataFechamentoConta;
     private double saldoConta;
 
     // Atributo tipo lista que recebe classe Transacao e cria uma array
@@ -57,6 +58,8 @@ public class Conta {
         this.setSaldoConta(0);
         this.setStatusConta(false);
         this.setTipoConta("Indefinido");
+        this.setDataAberturaConta(new Date());
+        this.setDataFechamentoConta(new Date());
     }
 
     // Construtor com parametros
@@ -117,5 +120,13 @@ public class Conta {
 
     public void setSaldoConta(double saldoConta) {
         this.saldoConta = saldoConta;
+    }
+
+    public Date getDataFechamentoConta() {
+        return dataFechamentoConta;
+    }
+
+    public void setDataFechamentoConta(Date dataFechamentoConta) {
+        this.dataFechamentoConta = dataFechamentoConta;
     }
 }
