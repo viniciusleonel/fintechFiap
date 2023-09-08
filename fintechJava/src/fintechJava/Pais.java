@@ -2,10 +2,13 @@ package fintechJava;
 
 public class Pais {
     private int idPais;
-    private String nomePais = "Indefinido";
+    private String nomePais;
 
-    // Construtor vazio
-    public Pais() {}
+    // Construtor básico
+    public Pais() {
+        this.setIdPais(0);
+        this.setNomePais("Indefinido");
+    }
 
     // Construtor com parametros
     public Pais(int idPais, String nomePais) {

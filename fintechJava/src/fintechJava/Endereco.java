@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Endereco extends Cidade{
-    private String nomeEndereco = "Indefinido";
+    private String nomeEndereco;
     private int idEndereco;
-    private String logradouro = "Indefinido";
-    private String bairro = "Indefinido";
-    private String numero = "Indefinido";
-    private String cep = "Indefinido";
+    private String logradouro;
+    private String bairro;
+    private String numero;
+    private String cep;
 
     // Atributo tipo lista que recebe classe endereco e cria uma array
     private List<Endereco> enderecosList = new ArrayList<>();
@@ -48,8 +48,15 @@ public class Endereco extends Cidade{
         }
     }
 
-    // Construtor vazio
-    public Endereco(){}
+    // Construtor básico
+    public Endereco(){
+        this.setNomeEndereco("Indefinido");
+        this.setIdEndereco(0);
+        this.setLogradouro("Indefinido");
+        this.setBairro("Indefinido");
+        this.setNumero("Indefinido");
+        this.setCep("Indefinido");
+    }
 
     // Construtor com parametros
     public Endereco(int idPais, String nomePais, int idEstado, String uf, String nomeEstado, int idCidade, String nomeCidade, int idEndereco, String logradouro, String bairro, String numero, String cep) {

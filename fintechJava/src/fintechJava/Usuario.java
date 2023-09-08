@@ -2,10 +2,10 @@ package fintechJava;
 
 public class Usuario extends Endereco{
     private int idUsuario;
-    private String nomeUsuario = "Indefinido";
-    private String loginUsuario = "Indefinido";
-    private String emailUsuario = "Indefinido";
-    private String senhaUsuario = "Indefinido";
+    private String nomeUsuario;
+    private String loginUsuario;
+    private String emailUsuario;
+    private String senhaUsuario;
     private Conta contaUsuario;
 
     public void exibirUsuario(){
@@ -18,8 +18,16 @@ public class Usuario extends Endereco{
         contaUsuario.exibirConta();
     }
 
-    public Usuario(){}
+    // Construtor básico
+    public Usuario(){
+        this.setIdUsuario(0);
+        this.setNomeUsuario("Indefinido");
+        this.setLoginUsuario("Indefinido");
+        this.setEmailUsuario("Indefinido");
+        this.setSenhaUsuario("Indefinido");
+    }
 
+    // Construtor com parametros
     public Usuario(int idPais, String nomePais, int idEstado, String uf, String nomeEstado, int idCidade, String nomeCidade, int idEndereco, String logradouro, String bairro, String numero, String cep, int idUsuario, String nomeUsuario, String loginUsuario, String emailUsuario, String senhaUsuario){
         super(idPais, nomePais, idEstado, uf, nomeEstado, idCidade, nomeCidade, idEndereco, logradouro, bairro, numero, cep);
         this.idUsuario = idUsuario;
@@ -29,6 +37,8 @@ public class Usuario extends Endereco{
         this.senhaUsuario = senhaUsuario;
     }
 
+
+    // Getters and Setters
     public int getIdUsuario() {
         return idUsuario;
     }

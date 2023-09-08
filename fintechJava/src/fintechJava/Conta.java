@@ -6,9 +6,9 @@ import java.util.List;
 
 public class Conta {
     private int idConta;
-    private String numeroConta = "Indefinido";
-    private String tipoConta = "Indefinido";
-    private boolean statusConta = false;
+    private String numeroConta;
+    private String tipoConta;
+    private boolean statusConta;
     private Date dataAberturaConta;
     private double saldoConta;
 
@@ -30,8 +30,16 @@ public class Conta {
         this.saldoConta -= valor;
     }
 
-    public Conta(){}
+    // Construtor básico
+    public Conta(){
+        this.setIdConta(0);
+        this.setNumeroConta("Indefinido");
+        this.setSaldoConta(0);
+        this.setStatusConta(false);
+        this.setTipoConta("Indefinido");
+    }
 
+    // Construtor com parametros
     public Conta(int idConta, String numeroConta, String tipoConta, boolean statusConta, Date dataAberturaConta, double saldoConta) {
         this.idConta = idConta;
         this.numeroConta = numeroConta;
@@ -41,6 +49,8 @@ public class Conta {
         this.saldoConta = saldoConta;
     }
 
+
+    // Getters and Setters
     public int getIdConta() {
         return idConta;
     }

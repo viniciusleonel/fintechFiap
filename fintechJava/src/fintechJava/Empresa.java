@@ -1,15 +1,40 @@
 package fintechJava;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Empresa extends Endereco{
     private int idEmpresa;
-    private String razaoSocial = "Indefinido";
-    private String nomeFantasia = "Indefinido";
-    private String cnpjEmpresa = "Indefinido";
+    private String razaoSocial;
+    private String nomeFantasia;
+    private String cnpjEmpresa;
     private double capitalEmpresa;
-    private String telefoneEmpresa = "Indefinido";
-    private String emailEmpresa = "Indefinido";
+    private String telefoneEmpresa;
+    private String emailEmpresa;
     private double faturamentoEmpresa;
     private Conta contaEmpresa;
+
+    private List<Empresa> empresasList = new ArrayList<>();
+
+    // Adiciona uma empresa na lista de Empresas
+    public void adicionarEmpresa(Empresa empresa) {
+        this.empresasList.add(empresa);
+    }
+
+    // Mostra as empresas listadas
+    public void listarEmpresas(){
+        for (Empresa empresa : empresasList){
+            System.out.println("===================");
+            System.out.println("Id: " + empresa.getIdEmpresa());
+            System.out.println("Razão Social: " + empresa.getRazaoSocial());
+            System.out.println("Nome Fantasia: " + empresa.getNomeFantasia());
+            System.out.println("Cnpj: " + empresa.getCnpjEmpresa());
+            System.out.println("Telefone: " + empresa.getTelefoneEmpresa());
+            System.out.println("Email: " + empresa.getEmailEmpresa());
+            System.out.println("Capital: " + empresa.getCapitalEmpresa());
+            System.out.println("Faturamento: " + empresa.getFaturamentoEmpresa());
+        }
+    }
 
     public void exibirEmpresa(){
         System.out.println("===============");
@@ -19,12 +44,22 @@ public class Empresa extends Endereco{
         System.out.println("Cnpj: " + this.getCnpjEmpresa());
         System.out.println("Telefone: " + this.getTelefoneEmpresa());
         System.out.println("Email: " + this.getEmailEmpresa());
+        System.out.println("Capital: " + this.getCapitalEmpresa());
         System.out.println("Faturamento: " + this.getFaturamentoEmpresa());
         contaEmpresa.exibirConta();
     }
 
-    // Construtor vazio
-    public Empresa(){}
+    // Construtor básico
+    public Empresa(){
+        this.setIdEmpresa(0);
+        this.setRazaoSocial("Indefinido");
+        this.setNomeFantasia("Indefinido");
+        this.setCnpjEmpresa("Indefinido");
+        this.setTelefoneEmpresa("Indefinido");
+        this.setEmailEmpresa("Indefinido");
+        this.setCapitalEmpresa(0);
+        this.setFaturamentoEmpresa(0);
+    }
 
     // Construtor com parametros
     public Empresa(int idPais, String nomePais, int idEstado, String uf, String nomeEstado, int idCidade, String nomeCidade, int idEndereco, String logradouro, String bairro, String numero, String cep, int idEmpresa, String razaoSocial, String nomeFantasia, String cnpjEmpresa, double capitalEmpresa, String telefoneEmpresa, String emailEmpresa, double faturamentoEmpresa) {

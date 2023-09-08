@@ -8,9 +8,9 @@ public class Transacao {
     private int idTransacao;
     private Date dataTransacao;
     private double valorTransacao;
-    private String tipoTransacao = "Indefinido";
-    private String descricaoTransacao = "Sem descrição";
-    private String destinoTransacao = "Indefinido";
+    private String tipoTransacao;
+    private String descricaoTransacao;
+    private String destinoTransacao;
 
     private List<Transacao> transacoesList = new ArrayList<>();
 
@@ -40,8 +40,16 @@ public class Transacao {
         System.out.println("Descrição: " + this.getDescricaoTransacao());
     }
 
-    public Transacao(){}
+    // Construtor básico
+    public Transacao(){
+        this.setIdTransacao(0);
+        this.setValorTransacao(0);
+        this.setTipoTransacao("Indefinido");
+        this.setDestinoTransacao("Indefinido");
+        this.setDestinoTransacao("Sem descrição");
+    }
 
+    // Construtor com parametros
     public Transacao(int idTransacao, Date dataTransacao, double valorTransacao, String tipoTransacao, String descricaoTransacao, String destinoTransacao) {
         this.idTransacao = idTransacao;
         this.dataTransacao = dataTransacao;
@@ -51,6 +59,8 @@ public class Transacao {
         this.destinoTransacao = destinoTransacao;
     }
 
+
+    // Getters and Setters
     public int getIdTransacao() {
         return idTransacao;
     }

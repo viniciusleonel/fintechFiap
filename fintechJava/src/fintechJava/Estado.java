@@ -2,11 +2,15 @@ package fintechJava;
 
 public class Estado extends Pais{
     private int idEstado;
-    private String uf = "Indefinido";
-    private String nomeEstado = "Indefinido";
+    private String uf;
+    private String nomeEstado;
 
-    // Construtor vazio
-    public Estado() {}
+    // Construtor básico
+    public Estado() {
+        this.setIdEstado(0);
+        this.setUf("Indefinido");
+        this.setNomeEstado("Indefinido");
+    }
 
     // Construtor com parametros
     public Estado(int idPais, String nomePais, int idEstado, String uf, String nomeEstado) {

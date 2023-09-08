@@ -2,10 +2,13 @@ package fintechJava;
 
 public class Cidade extends Estado{
     private int idCidade;
-    private String nomeCidade = "Indefinido";
+    private String nomeCidade;
 
-    // Construtor vazio
-    public Cidade(){}
+    // Construtor básico
+    public Cidade(){
+        this.setIdCidade(0);
+        this.setNomeCidade("Indefinido");
+    }
 
     // Construtor com parametros
     public Cidade(int idPais, String nomePais, int idEstado, String uf, String nomeEstado, int idCidade, String nomeCidade) {
