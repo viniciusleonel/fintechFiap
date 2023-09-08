@@ -14,6 +14,7 @@ public class Empresa extends Endereco{
     private double faturamentoEmpresa;
     private Conta contaEmpresa;
 
+    // Atributo tipo lista que recebe classe Empresa e cria uma array
     private List<Empresa> empresasList = new ArrayList<>();
 
     // Adiciona uma empresa na lista de Empresas
@@ -25,7 +26,7 @@ public class Empresa extends Endereco{
     public void listarEmpresas(){
         for (Empresa empresa : empresasList){
             System.out.println("===================");
-            System.out.println("Id: " + empresa.getIdEmpresa());
+            System.out.println("Id da Empresa: " + empresa.getIdEmpresa());
             System.out.println("Razão Social: " + empresa.getRazaoSocial());
             System.out.println("Nome Fantasia: " + empresa.getNomeFantasia());
             System.out.println("Cnpj: " + empresa.getCnpjEmpresa());
@@ -38,7 +39,7 @@ public class Empresa extends Endereco{
 
     public void exibirEmpresa(){
         System.out.println("===============");
-        System.out.println("Id: " + this.getIdEmpresa());
+        System.out.println("Id da Empresa: " + this.getIdEmpresa());
         System.out.println("Razão Social: " + this.getRazaoSocial());
         System.out.println("Nome Fantasia: " + this.getNomeFantasia());
         System.out.println("Cnpj: " + this.getCnpjEmpresa());

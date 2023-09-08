@@ -12,9 +12,29 @@ public class Conta {
     private Date dataAberturaConta;
     private double saldoConta;
 
+    // Atributo tipo lista que recebe classe Transacao e cria uma array
+    private List<Conta> contasList = new ArrayList<>();
+
+    // Adiciona uma transação na lista de transações
+    public void adicionarConta(Conta conta) {
+        this.contasList.add(conta);
+    }
+
+    // Mostra as transações listadas
+    public void listarTransacoes(){
+        for (Conta conta : contasList){
+            System.out.println("Id da Conta: " + conta.getIdConta());
+            System.out.println("Número: " + conta.getNumeroConta());
+            System.out.println("Tipo: " + conta.getTipoConta());
+            System.out.println("Status: " + conta.getStatusConta());
+            System.out.println("Saldo: " + conta.getSaldoConta());
+            System.out.println("Data de Abertura: " + conta.getDataAberturaConta());
+        }
+    }
+
     public void exibirConta(){
 //        System.out.println("===============");
-        System.out.println("Id: " + this.getIdConta());
+        System.out.println("Id da Conta: " + this.getIdConta());
         System.out.println("Número: " + this.getNumeroConta());
         System.out.println("Tipo: " + this.getTipoConta());
         System.out.println("Status: " + this.getStatusConta());

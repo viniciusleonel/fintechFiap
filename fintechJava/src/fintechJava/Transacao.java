@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class Transacao {
+public class Transacao extends Conta{
     private int idTransacao;
     private Date dataTransacao;
     private double valorTransacao;
@@ -12,8 +12,8 @@ public class Transacao {
     private String descricaoTransacao;
     private String destinoTransacao;
 
+    // Atributo tipo lista que recebe classe Transacao e cria uma array
     private List<Transacao> transacoesList = new ArrayList<>();
-
 
     // Adiciona uma transação na lista de transações
     public void adicionarTransacao(Transacao transacao) {
@@ -50,7 +50,8 @@ public class Transacao {
     }
 
     // Construtor com parametros
-    public Transacao(int idTransacao, Date dataTransacao, double valorTransacao, String tipoTransacao, String descricaoTransacao, String destinoTransacao) {
+    public Transacao(int idConta, String numeroConta, String tipoConta, boolean statusConta, Date dataAberturaConta, double saldoConta, int idTransacao, Date dataTransacao, double valorTransacao, String tipoTransacao, String descricaoTransacao, String destinoTransacao) {
+        super(idConta, numeroConta, tipoConta, statusConta, dataAberturaConta, saldoConta);
         this.idTransacao = idTransacao;
         this.dataTransacao = dataTransacao;
         this.valorTransacao = valorTransacao;
@@ -58,7 +59,6 @@ public class Transacao {
         this.descricaoTransacao = descricaoTransacao;
         this.destinoTransacao = destinoTransacao;
     }
-
 
     // Getters and Setters
     public int getIdTransacao() {

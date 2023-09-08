@@ -10,7 +10,7 @@ public class Usuario extends Endereco{
 
     public void exibirUsuario(){
         System.out.println("===============");
-        System.out.println("Id: " + this.getIdUsuario());
+        System.out.println("Id do Usuário: " + this.getIdUsuario());
         System.out.println("Nome: " + this.getNomeUsuario());
         System.out.println("Login: " + this.getLoginUsuario());
         System.out.println("Email: " + this.getEmailUsuario());
