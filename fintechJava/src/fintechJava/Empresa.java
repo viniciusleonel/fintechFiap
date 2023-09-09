@@ -1,6 +1,7 @@
 package fintechJava;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Empresa extends Endereco{
@@ -18,8 +19,8 @@ public class Empresa extends Endereco{
     private List<Empresa> empresasList = new ArrayList<>();
 
     // Adiciona uma empresa na lista de Empresas
-    public void adicionarEmpresa(Empresa empresa) {
-        this.empresasList.add(empresa);
+    public void adicionarEmpresa(Empresa... empresa) {
+        Collections.addAll(empresasList, empresa);
     }
 
     // Mostra as empresas listadas

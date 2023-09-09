@@ -2,6 +2,7 @@ package fintechJava;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Collections;
 
 public class Endereco extends Cidade{
     private String nomeEndereco;
@@ -29,7 +30,7 @@ public class Endereco extends Cidade{
 
     // Adiciona os enderecos na lista de enderecos
     public void adicionarEndereco(Endereco endereco) {
-        this.enderecosList.add(endereco);
+        Collections.addAll(enderecosList, endereco);
     }
 
     // Mostra os enderecos listados

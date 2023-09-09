@@ -1,6 +1,7 @@
 package fintechJava;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 
@@ -18,7 +19,7 @@ public class Transacao extends Conta{
 
     // Adiciona uma transação na lista de transações
     public void adicionarTransacao(Transacao transacao) {
-        this.transacoesList.add(transacao);
+        Collections.addAll(transacoesList, transacao);
     }
 
     // Mostra as transações listadas

@@ -38,8 +38,8 @@ public class Teste {
         empresa2.setIdEmpresa(456);
         empresa2.setNomeFantasia("Fintech");
 
-        listaEmpresas.adicionarEmpresa(empresa1);
-        listaEmpresas.adicionarEmpresa(empresa2);
+        listaEmpresas.adicionarEmpresa(empresa1, empresa2);
+//        listaEmpresas.adicionarEmpresa(empresa2);
         listaEmpresas.listarEmpresas();
 
         System.out.println("----------------------------------------");
