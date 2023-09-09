@@ -15,16 +15,16 @@ public class Investimento extends Conta{
     private String descricaoInvestimento;
     private Conta conta;
 
-    // Atributo tipo lista que recebe classe Transacao e cria uma array
+    // Atributo tipo lista que recebe classe Investimento e cria uma array
     private List<Investimento> investimentosList = new ArrayList<>();
 
-    // Adiciona uma transação na lista de transações
-    public void adicionarTransacao(Investimento investimento) {
+    // Adiciona um investimento na lista de investimentos
+    public void adicionarInvestimento(Investimento... investimento) {
         Collections.addAll(investimentosList, investimento);
     }
 
-    // Mostra as transações listadas
-    public void listarTransacoes(){
+    // Mostra os investimentos listadas
+    public void listarInvestimentos(){
         for (Investimento investimento : investimentosList){
             System.out.println("===================");
             System.out.println("ID do Investimento: " + investimento.getIdInvestimento());

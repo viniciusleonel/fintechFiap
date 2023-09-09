@@ -1,5 +1,9 @@
 package fintechJava;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Usuario extends Endereco{
     private int idUsuario;
     private String nomeUsuario;
@@ -7,6 +11,26 @@ public class Usuario extends Endereco{
     private String emailUsuario;
     private String senhaUsuario;
     private Conta contaUsuario;
+
+    // Atributo tipo lista que recebe classe Usuario e cria uma array
+    private List<Usuario> usuariosList = new ArrayList<>();
+
+    // Adiciona um usuario na lista de Usuarios
+    public void adicionarUsuario(Usuario... usuario) {
+        Collections.addAll(usuariosList, usuario);
+    }
+
+    // Mostra os Usuarios listadas
+    public void listarUsuarios(){
+        for (Usuario usuario : usuariosList){
+            System.out.println("===============");
+            System.out.println("Id do Usuário: " + usuario.getIdUsuario());
+            System.out.println("Nome: " + usuario.getNomeUsuario());
+            System.out.println("Login: " + usuario.getLoginUsuario());
+            System.out.println("Email: " + usuario.getEmailUsuario());
+            System.out.println("Senha: " + usuario.getSenhaUsuario());
+        }
+    }
 
     public void exibirUsuario(){
         System.out.println("===============");

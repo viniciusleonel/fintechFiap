@@ -14,16 +14,16 @@ public class Conta {
     private Date dataFechamentoConta;
     private double saldoConta;
 
-    // Atributo tipo lista que recebe classe Transacao e cria uma array
+    // Atributo tipo lista que recebe classe Conta e cria uma array
     private List<Conta> contasList = new ArrayList<>();
 
-    // Adiciona uma transação na lista de transações
-    public void adicionarConta(Conta conta) {
+    // Adiciona uma conta na lista de contas
+    public void adicionarConta(Conta... conta) {
         Collections.addAll(contasList, conta);
     }
 
-    // Mostra as transações listadas
-    public void listarTransacoes(){
+    // Mostra as contas listadas
+    public void listarContas(){
         for (Conta conta : contasList){
             System.out.println("Id da Conta: " + conta.getIdConta());
             System.out.println("Número: " + conta.getNumeroConta());

@@ -18,7 +18,7 @@ public class Transacao extends Conta{
     private List<Transacao> transacoesList = new ArrayList<>();
 
     // Adiciona uma transação na lista de transações
-    public void adicionarTransacao(Transacao transacao) {
+    public void adicionarTransacao(Transacao... transacao) {
         Collections.addAll(transacoesList, transacao);
     }
 
